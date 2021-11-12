@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "p04dSM5Q1NZCp8CrvgGHVt61lw/vWdtybh0CiIZ11azdYMNZaxtfApo9zV/l6ZSX+EZst8B9SygoyUUsw6JniQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Selma\\Desktop\\Klinika_IS\\ISKlinike\\ISKlinike.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Selma\\.nuget\\packages\\documentformat.openxml\\2.13.0\\documentformat.openxml.2.13.0.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\microsoft.reportingservices.reportviewercontrol.winforms\\140.337.80\\microsoft.reportingservices.reportviewercontrol.winforms.140.337.80.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\microsoft.sqlserver.types\\14.0.1016.290\\microsoft.sqlserver.types.14.0.1016.290.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\splashscreen.winforms\\1.0.0\\splashscreen.winforms.1.0.0.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\sqlite-net\\1.6.292\\sqlite-net.1.6.292.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\sqlite-net-pcl\\1.4.118\\sqlite-net-pcl.1.4.118.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\sqlite.interop.dll\\1.0.103\\sqlite.interop.dll.1.0.103.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\sqlitenetextensions\\2.1.0\\sqlitenetextensions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.4\\sqlitepclraw.provider.e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\stub.system.data.sqlite.core.netframework\\1.0.114\\stub.system.data.sqlite.core.netframework.1.0.114.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\system.data.sqlite\\1.0.114\\system.data.sqlite.1.0.114.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\system.data.sqlite.core\\1.0.114.1\\system.data.sqlite.core.1.0.114.1.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\system.data.sqlite.ef6\\1.0.114\\system.data.sqlite.ef6.1.0.114.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\system.data.sqlite.linq\\1.0.114\\system.data.sqlite.linq.1.0.114.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\Selma\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

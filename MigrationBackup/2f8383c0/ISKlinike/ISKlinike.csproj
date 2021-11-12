@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C949B8CA-E7A2-4029-84BC-A01C465DA168}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ISKlinike</RootNamespace>
+    <AssemblyName>ISKlinike</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.12.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.12.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SplashScreen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SplashScreen.Winforms.1.0.0\lib\SplashScreen.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sqlite-net-pcl.1.4.118\lib\netstandard1.1\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLiteNetExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLiteNetExtensions.2.1.0\lib\netstandard1.1\SQLiteNetExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a84b7dcfb1391f7f, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\net45\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\net45\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.5\lib\net45\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.e_sqlite3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9c301db686d0bd12, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.net45.1.1.5\lib\net45\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.113.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.113.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Doktor\DatumiPosjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\DatumiPosjeta.Designer.cs">
+      <DependentUpon>DatumiPosjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\DatumiPosjetaUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\DatumiPosjetaUredi.Designer.cs">
+      <DependentUpon>DatumiPosjetaUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\DrugeUstanove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\DrugeUstanove.Designer.cs">
+      <DependentUpon>DrugeUstanove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\DrugeUstanoveUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\DrugeUstanoveUredi.Designer.cs">
+      <DependentUpon>DrugeUstanoveUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\NoviTermin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\NoviTermin.Designer.cs">
+      <DependentUpon>NoviTermin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\Termini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\Termini.Designer.cs">
+      <DependentUpon>Termini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Baza.cs" />
+    <Compile Include="Doktor\DatumiDolazaka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\DatumiDolazaka.Designer.cs">
+      <DependentUpon>DatumiDolazaka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EF\DBContext.cs" />
+    <Compile Include="Model\TerminPregleda.cs" />
+    <Compile Include="Pacijent\DatumiPosjeta_Pacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacijent\DatumiPosjeta_Pacijent.Designer.cs">
+      <DependentUpon>DatumiPosjeta_Pacijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacijent\DrugeUstanove_Pacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacijent\DrugeUstanove_Pacijent.Designer.cs">
+      <DependentUpon>DrugeUstanove_Pacijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacijent\Izborna_Pacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacijent\Izborna_Pacijent.Designer.cs">
+      <DependentUpon>Izborna_Pacijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\IzdataUvjerenja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\IzdataUvjerenja.Designer.cs">
+      <DependentUpon>IzdataUvjerenja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\IzdataUvjerenjaUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\IzdataUvjerenjaUredi.Designer.cs">
+      <DependentUpon>IzdataUvjerenjaUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\FormaLičniPodaci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\FormaLičniPodaci.Designer.cs">
+      <DependentUpon>FormaLičniPodaci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KartonDatumiPosjeta.cs" />
+    <Compile Include="Model\KartonDrugeUstanove.cs" />
+    <Compile Include="Model\KartonIzdataUvjerenja.cs" />
+    <Compile Include="Model\KartonLicniPodaci.cs" />
+    <Compile Include="Model\KartonNalazi.cs" />
+    <Compile Include="Model\KartonOboljenja.cs" />
+    <Compile Include="Doktor\KartonPacijenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\KartonPacijenta.Designer.cs">
+      <DependentUpon>KartonPacijenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KartonPeriodicniPregledi.cs" />
+    <Compile Include="Model\KartonPreventivneMjere.cs" />
+    <Compile Include="Doktor\PeriodicniPregledi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\PeriodicniPregledi.Designer.cs">
+      <DependentUpon>PeriodicniPregledi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Korisnik.cs" />
+    <Compile Include="Doktor\ListaPacijenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\ListaPacijenata.Designer.cs">
+      <DependentUpon>ListaPacijenata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\LičniPodaciPacijenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\LičniPodaciPacijenta.Designer.cs">
+      <DependentUpon>LičniPodaciPacijenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\NalaziPacijenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\NalaziPacijenta.Designer.cs">
+      <DependentUpon>NalaziPacijenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\NalaziPacijntaUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\NalaziPacijntaUredi.Designer.cs">
+      <DependentUpon>NalaziPacijntaUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\NesposobnostZaRadOdDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\NesposobnostZaRadOdDo.Designer.cs">
+      <DependentUpon>NesposobnostZaRadOdDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\NoviPacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\NoviPacijent.Designer.cs">
+      <DependentUpon>NoviPacijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\OboljenjaPacijenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\OboljenjaPacijenta.Designer.cs">
+      <DependentUpon>OboljenjaPacijenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\OboljenjaUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\OboljenjaUredi.Designer.cs">
+      <DependentUpon>OboljenjaUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Pacijenti.cs" />
+    <Compile Include="Doktor\PeriodicniPreglediUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\PeriodicniPreglediUredi.Designer.cs">
+      <DependentUpon>PeriodicniPreglediUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\PreventivneMjere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\PreventivneMjere.Designer.cs">
+      <DependentUpon>PreventivneMjere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\PreventivneMjereUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\PreventivneMjereUredi.Designer.cs">
+      <DependentUpon>PreventivneMjereUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacijent\IzdataUvjerenja_Pacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacijent\IzdataUvjerenja_Pacijent.Designer.cs">
+      <DependentUpon>IzdataUvjerenja_Pacijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacijent\LicniPodaci_Pacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacijent\LicniPodaci_Pacijent.Designer.cs">
+      <DependentUpon>LicniPodaci_Pacijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacijent\Nalazi_Pacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacijent\Nalazi_Pacijent.Designer.cs">
+      <DependentUpon>Nalazi_Pacijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacijent\NoviTermin_Pacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacijent\NoviTermin_Pacijent.Designer.cs">
+      <DependentUpon>NoviTermin_Pacijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacijent\Oboljenja_Pacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacijent\Oboljenja_Pacijent.Designer.cs">
+      <DependentUpon>Oboljenja_Pacijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacijent\PeriodicniPregledi_Pacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacijent\PeriodicniPregledi_Pacijent.Designer.cs">
+      <DependentUpon>PeriodicniPregledi_Pacijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacijent\PreventivneMjere_Pacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacijent\PreventivneMjere_Pacijent.Designer.cs">
+      <DependentUpon>PreventivneMjere_Pacijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helper\Validator.cs" />
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacijent\Termini_Pacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacijent\Termini_Pacijent.Designer.cs">
+      <DependentUpon>Termini_Pacijent.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Doktor\DatumiDolazaka.resx">
+      <DependentUpon>DatumiDolazaka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\DatumiPosjeta.resx">
+      <DependentUpon>DatumiPosjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\DatumiPosjetaUredi.resx">
+      <DependentUpon>DatumiPosjetaUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\DrugeUstanove.resx">
+      <DependentUpon>DrugeUstanove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\DrugeUstanoveUredi.resx">
+      <DependentUpon>DrugeUstanoveUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\NoviTermin.resx">
+      <DependentUpon>NoviTermin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\Termini.resx">
+      <DependentUpon>Termini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacijent\DatumiPosjeta_Pacijent.resx">
+      <DependentUpon>DatumiPosjeta_Pacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacijent\DrugeUstanove_Pacijent.resx">
+      <DependentUpon>DrugeUstanove_Pacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacijent\Izborna_Pacijent.resx">
+      <DependentUpon>Izborna_Pacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\IzdataUvjerenja.resx">
+      <DependentUpon>IzdataUvjerenja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\IzdataUvjerenjaUredi.resx">
+      <DependentUpon>IzdataUvjerenjaUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\FormaLičniPodaci.resx">
+      <DependentUpon>FormaLičniPodaci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\KartonPacijenta.resx">
+      <DependentUpon>KartonPacijenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\PeriodicniPregledi.resx">
+      <DependentUpon>PeriodicniPregledi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\ListaPacijenata.resx">
+      <DependentUpon>ListaPacijenata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\LičniPodaciPacijenta.resx">
+      <DependentUpon>LičniPodaciPacijenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\NalaziPacijenta.resx">
+      <DependentUpon>NalaziPacijenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\NalaziPacijntaUredi.resx">
+      <DependentUpon>NalaziPacijntaUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\NesposobnostZaRadOdDo.resx">
+      <DependentUpon>NesposobnostZaRadOdDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\NoviPacijent.resx">
+      <DependentUpon>NoviPacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\OboljenjaPacijenta.resx">
+      <DependentUpon>OboljenjaPacijenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\OboljenjaUredi.resx">
+      <DependentUpon>OboljenjaUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\PeriodicniPreglediUredi.resx">
+      <DependentUpon>PeriodicniPreglediUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\PreventivneMjere.resx">
+      <DependentUpon>PreventivneMjere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\PreventivneMjereUredi.resx">
+      <DependentUpon>PreventivneMjereUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacijent\IzdataUvjerenja_Pacijent.resx">
+      <DependentUpon>IzdataUvjerenja_Pacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacijent\LicniPodaci_Pacijent.resx">
+      <DependentUpon>LicniPodaci_Pacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacijent\Nalazi_Pacijent.resx">
+      <DependentUpon>Nalazi_Pacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacijent\NoviTermin_Pacijent.resx">
+      <DependentUpon>NoviTermin_Pacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacijent\Oboljenja_Pacijent.resx">
+      <DependentUpon>Oboljenja_Pacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacijent\PeriodicniPregledi_Pacijent.resx">
+      <DependentUpon>PeriodicniPregledi_Pacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacijent\PreventivneMjere_Pacijent.resx">
+      <DependentUpon>PreventivneMjere_Pacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacijent\Termini_Pacijent.resx">
+      <DependentUpon>Termini_Pacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="klinika.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Slike\07022019-15.jpg" />
+    <Content Include="Slike\pngtree-vector-white-background-with-abstract-geometric-pattern-or-textu-image_265390.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets')" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets')" />
+</Project>
